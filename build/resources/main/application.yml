@@ -1,0 +1,36 @@
+spring:
+  h2:
+    console:
+      enabled: 'true'
+  datasource:
+    url: jdbc:h2:mem:testdb
+    platform: h2
+    username: sa
+    driver-class-name: org.h2.Driver
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: 'true'
+        format_sql: 'true'
+    defer-datasource-initialization: 'true'
+    show-sql: 'true'
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
+        type: trace
+server:
+  port: 8081
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+
+patron:
+  password: ^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,20}$
