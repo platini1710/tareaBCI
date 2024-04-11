@@ -4,7 +4,7 @@
 	  
 2.-	Para probar los test unitario y de integracion debe colocar el siguiente comando
 
-      ./gradlew check run
+      gradlew check run
 	  
 	  los reporte html  estan en la carpeta 
 	  
@@ -16,7 +16,7 @@
 	 
 3.-	Para Levanar   proyecto el :
 	  
-      ./gradlew run               ==> ojo, el proyecto se levantara en un tomcat emebedido en el puerto 8081
+      gradlew run               ==> ojo, el proyecto se levantara en un tomcat emebedido en el puerto 8081
 	   
 	   
 4.-	para probar con datos en el Postman
