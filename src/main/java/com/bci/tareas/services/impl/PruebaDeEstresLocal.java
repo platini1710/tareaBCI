@@ -21,7 +21,7 @@ public class PruebaDeEstresLocal {
 
         // 1. Configurar HikariCP por código (Sin Spring Boot)
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/mi_tienda_db");
+       config.setJdbcUrl("jdbc:mysql://192.168.100.157:3306/mi_tienda_db");
         config.setUsername("mi_usuario");
         config.setPassword("secreto");
         config.setMaximumPoolSize(TAMANO_POOL_HIKARI);
