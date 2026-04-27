@@ -13,5 +13,5 @@ public interface  ConsultaUsuarioService {
 
 	public UsuarioDTO findUsuario(String id) ;
 	public List<Usuario> findEmail(String email) ;
-	public List<RespuestaDTO> findAllUsuario() ;
+	public List<UsuarioDTO> findAllUsuario() ;
 }

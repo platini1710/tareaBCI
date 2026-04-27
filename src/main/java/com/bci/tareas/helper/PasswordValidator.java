@@ -11,14 +11,6 @@ public class PasswordValidator {
 
 
 	private static final Logger logger = LoggerFactory.getLogger(PasswordValidator.class);
-	public static boolean isValid(String password) {
-		logger.info("password : " +password);
-		logger.info("PatronPassword : " + Constantes.PASSWORD_PATTERN);
 
-	    Pattern pattern = Pattern.compile(Constantes.PASSWORD_PATTERN);
-	    Matcher matcher = pattern.matcher(password);
-
-		return matcher.matches();
-	}
 
 }

@@ -14,6 +14,5 @@ public class Constantes {
 	  public static final String INSERTSUCESSFUL = "Registro ingresado exitosamente";
 	  public static final String ERRORSAVE = "Se produjo un Error al querer guardar el registro ";
 	  public static final String delete = "Registro borrado exitosamente";
-	  public static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
 
 }

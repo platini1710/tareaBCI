@@ -8,6 +8,11 @@ spring:
     username: sa
     driver-class-name: org.h2.Driver
   data:
+    redis:
+      # Dirección donde está corriendo tu servidor Redis (usualmente localhost en desarrollo)
+      host: localhost
+      # Mi puerto por defecto
+      port: 6379
     jpa:
       repositories:
         bootstrap-mode: default
@@ -25,7 +30,7 @@ logging:
         stat: debug
         type: trace
 server:
-  port: 8081
+  port: 8082
 
 management:
   endpoint:

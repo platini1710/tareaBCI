@@ -7,19 +7,11 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import com.bci.tareas.controllers.ControllerRegistation;
-import com.bci.tareas.dto.PhoneDTO;
 import com.bci.tareas.dto.RespuestaDTO;
 import com.bci.tareas.dto.UsuarioDTO;
-import com.bci.tareas.exception.ResourceFoundException;
 import com.bci.tareas.helper.Constantes;
-import com.bci.tareas.helper.ErrorException;
-import com.bci.tareas.helper.ErrorResp;
-import com.bci.tareas.helper.Utils;
 import com.bci.tareas.model.Phone;
 import com.bci.tareas.model.Usuario;
 import com.bci.tareas.repositorio.PhoneDataRestRepository;
@@ -45,8 +37,8 @@ public class RegistraUsuarioServicesImpl implements RegistraUsuarioServices {
 		logger.debug("str " + str);
 		usuarioDto.setLastLogin(str);
 		logger.debug("uuid  " + uuid.toString());
-		usuarioDto.setToken(Utils.getJWTToken(usuarioDto.getName()));
-		logger.debug("token " + Utils.getJWTToken(usuarioDto.getName()));
+
+
 		usuarioDto.setActive(true);
 		response.setUuid(uuid.toString());
 		// response.setMsg(Constantes.insert);

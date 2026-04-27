@@ -3,27 +3,16 @@ package com.bci.tareas.model;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-
+import jakarta.persistence.*;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 
 
 
 @Entity
 @Table(name = "usuario" )
-@EntityListeners(AuditingEntityListener.class)
+
 
 public class Usuario implements Serializable {
 
@@ -47,7 +36,7 @@ public class Usuario implements Serializable {
     @Column(name = "isactive",columnDefinition = "boolean  default true", nullable = true )
     private boolean  isActive;
 
-    @OneToOne(fetch=FetchType.EAGER, orphanRemoval = true, cascade = { javax.persistence.CascadeType.ALL })
+    @OneToOne(fetch=FetchType.EAGER, orphanRemoval = true, cascade = { jakarta.persistence.CascadeType.ALL })
     @Fetch(FetchMode.JOIN)
     @JoinColumn(name="id",referencedColumnName = "id",nullable = true )
     private Phone phone;
